@@ -1,11 +1,13 @@
 package me.dio.domain.model;
 
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity(name = "tb_users")
 public class User {
 
+    public Long getId;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,6 +37,50 @@ public class User {
         this.account = account;
         this.features = features;
         this.orders = orders;
+        this.rentals = rentals;
+    }
+
+    public Object getId() {
+        return null;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(List<Feature> features) {
+        this.features = features;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+    public List<Rental> getRentals() {
+        return rentals;
+    }
+
+    public void setRentals(List<Rental> rentals) {
         this.rentals = rentals;
     }
 

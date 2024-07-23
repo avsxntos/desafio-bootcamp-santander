@@ -23,5 +23,29 @@ public class Account {
         this.books = books;
     }
 
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public int getBooks() {
+        return books;
+    }
+
+    public void setBooks(int books) {
+        this.books = books;
+    }
+
+    public String getBalance() {
+        return balance;
+    }
+
+    public void setBalance(String balance) {
+        this.balance = balance;
+    }
+
     // Getters and Setters
 }
